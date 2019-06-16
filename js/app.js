@@ -56,6 +56,15 @@ function reset_timer(){
     document.getElementsByClassName('play-time')[0].innerHTML = '00:00';
 }
 
+function reset_rating(){
+    document.getElementsByClassName('moves')[0].innerHTML = '0';
+    let stars = document.getElementsByClassName('fa-star');
+    
+    for(let star of stars){
+        star.classList.remove('hide');
+    }
+}
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
