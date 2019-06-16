@@ -65,6 +65,17 @@ function reset_rating(){
     }
 }
 
+function reset_game(){
+    reset_card_deck();
+    reset_timer();
+    reset_rating();
+}
+
+reset_game();
+
+
+
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
