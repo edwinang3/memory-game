@@ -1,7 +1,24 @@
 /*
  * Create a list that holds all of your cards
  */
-
+const init_card_list = [
+    'bomb',
+    'bolt',
+    'diamond',
+    'bomb',
+    'bicycle',
+    'paper-plane-o',
+    'anchor',
+    'leaf',
+    'cube',
+    'bolt',
+    'diamond',
+    'cube',
+    'leaf',
+    'anchor',
+    'bicycle',
+    'paper-plane-o'
+];
 
 /*
  * Display the cards on the page
