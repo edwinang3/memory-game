@@ -145,3 +145,117 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+
+/* Modal */
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.9);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    width: 550px;
+    min-height: 300px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    padding: 2em 2.5em;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal-container button{
+    border: none;
+    background: #ffffff;
+    padding: 1em 1.2em;
+    font-size: 1em;
+    border-radius: 5px;
+    box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out;
+}
+
+.modal-container button:hover, .modal-container button:active{ 
+    background: #e3e3e3;
+}
+
+.modal-container .modal-deck{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+}
+
+.modal-container .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    margin: 15px;
+    background: #02ccba;
+    font-size: 33px;
+    animation-delay: 0.5s;
+}
+
+.modal-container .highlight-text {
+    font-size: 1.2em;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.rating-result .stars {
+    padding: 0;
+    margin: 0;
+}
+.rating-result li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 0.2em;
+}
+
+.rating-result .stars i {
+    color: #e3e3e3;
+    font-size: 2em;
+    text-shadow: 3px 3px 10px rgba(46, 61, 73, 0.15);
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+
+.rating-result .stars li:nth-child(1) i{
+    -webkit-animation-delay: 0.65s;
+    animation-delay: 0.65s;
+}
+.rating-result .stars li:nth-child(2) i{
+    font-size: 3em;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.rating-result .stars li:nth-child(3) i{
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.rating-result .stars i.awarded{
+    color: #f5c70e;
+}
+
