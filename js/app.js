@@ -52,6 +52,11 @@ function reset_card_deck(){
     }
 }
 
+function reset_timer(){
+    document.getElementsByClassName('play-time')[0].innerHTML = '00:00';
+}
+
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
