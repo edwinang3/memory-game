@@ -1,11 +1,13 @@
 html {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 
 html,
@@ -23,10 +25,23 @@ body {
 }
 
 .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
 }
 
@@ -52,14 +67,29 @@ h1 {
     width: 660px;
     max-width: 90%;
     min-height: 680px;
+    background: -webkit-linear-gradient(290deg, #02ccba 0%, #aa7ecd 100%);
+    background: -o-linear-gradient(290deg, #02ccba 0%, #aa7ecd 100%);
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
-    border-radius: 10px;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    -webkit-box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+            box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0 0 3em;
 }
 
@@ -69,28 +99,46 @@ h1 {
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
-    border-radius: 8px;
+    -webkit-border-radius: 8px;
+            border-radius: 8px;
     cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+            box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    -webkit-transition: background 0s 0.15s, font-size 0s 0.15s, -webkit-transform 0.3s ease-in-out;
+    transition: background 0s 0.15s, font-size 0s 0.15s, -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out, background 0s 0.15s, font-size 0s 0.15s;
     transition: transform 0.3s ease-in-out, background 0s 0.15s, font-size 0s 0.15s;
-    transform: rotateY(-180deg);
+    transition: transform 0.3s ease-in-out, background 0s 0.15s, font-size 0s 0.15s, -webkit-transform 0.3s ease-in-out;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
     margin: 8px;
 }
 
 
 
 .deck .card.open {
-    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
     cursor: default;
     background: #02b3e4;
     font-size: 33px;
 }
 
 .deck .card.match {
-    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
     cursor: default;
     background: #02ccba;
     font-size: 33px;
@@ -98,11 +146,13 @@ h1 {
     animation-name: rubberBand;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
-    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
 }
 
 .deck .card.incorrect {
-    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
     cursor: default;
     background: #da4d31;
     font-size: 33px;
@@ -110,13 +160,16 @@ h1 {
     animation-name: shake;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
-    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
 }
 
 @media screen and (max-width: 700px){
     .deck {
         padding: 1em;
-        justify-content: space-around;
+        -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
     }
     
     .deck .card {
@@ -132,9 +185,18 @@ h1 {
         top: 0;
         width: 100%;
         height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     
     .deck .card.open, .deck .card.match, .deck .card.incorrect{
@@ -152,14 +214,24 @@ h1 {
     max-width: 100%;
     padding: 0 15px;
     margin-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 @media screen and (max-width: 700px){
     .score-panel {
         text-align: center;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .score-panel .timer, .score-panel .rating, .score-panel .restart {
         margin: 5px 0;
@@ -196,6 +268,8 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -o-transition: opacity 0.15s ease-in-out;
     transition: opacity 0.15s ease-in-out;
 }
 
@@ -213,26 +287,40 @@ h1 {
     position: fixed;
     left: 0;
     top: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     overflow: scroll;
 }
 
 .modal-container {
+    background: -webkit-linear-gradient(290deg, #02ccba 0%, #aa7ecd 100%);
+    background: -o-linear-gradient(290deg, #02ccba 0%, #aa7ecd 100%);
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     width: 550px;
     max-width: 85%;
     min-height: 300px;
     margin: 40px;
 /*    max-height: 85%;*/
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     position: relative;
     text-align: center;
     color: #ffffff;
-    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    -webkit-box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+            box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     padding: 2em 2.5em;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -241,12 +329,16 @@ h1 {
     background: #ffffff;
     padding: 1em 1.2em;
     font-size: 1em;
-    border-radius: 5px;
-    box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
+            box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
     font-family: 'Open Sans', sans-serif;
     margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+    -webkit-transition: background 0.15s ease-in-out;
+    -o-transition: background 0.15s ease-in-out;
     transition: background 0.15s ease-in-out;
 }
 
@@ -255,10 +347,21 @@ h1 {
 }
 
 .modal-container .modal-deck{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding:0;
 }
 
@@ -268,15 +371,27 @@ h1 {
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
-    border-radius: 8px;
+    -webkit-border-radius: 8px;
+            border-radius: 8px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+            box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
     margin: 15px;
     background: #02ccba;
     font-size: 33px;
-    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
 }
 
 @media screen and (max-width: 700px){
