@@ -125,7 +125,7 @@ h1 {
     display: inline-block;
 }
 
-.score-panel .timer{
+.score-panel .timer, .score-panel .moves{
     font-family: 'Roboto Mono', monospace;
 }
 
