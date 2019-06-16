@@ -125,6 +125,11 @@ h1 {
     display: inline-block;
 }
 
+.score-panel .stars i {
+    color: #f5c70e;
+    font-size: 1.2em;
+}
+
 .score-panel .timer, .score-panel .moves{
     font-family: 'Roboto Mono', monospace;
 }
