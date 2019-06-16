@@ -125,6 +125,10 @@ h1 {
     display: inline-block;
 }
 
+.score-panel .timer{
+    font-family: 'Roboto Mono', monospace;
+}
+
 .score-panel .restart {
     float: right;
     cursor: pointer;
