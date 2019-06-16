@@ -42,6 +42,18 @@ function shuffle(array) {
     return array;
 }
 
+// reset card deck
+function reset_deck(){
+    document.getElementsByClassName('deck')[0].innerHTML = '';
+    
+    for(var card of shuffle(init_card_list)){
+        const card_html = `<li class="card open show"><i class="fa fa-${card}"></i></li>`;
+        document.getElementsByClassName('deck')[0].innerHTML += card_html;
+    }
+}
+
+
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
